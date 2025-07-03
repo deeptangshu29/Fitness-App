@@ -1,0 +1,40 @@
+name: Backend CI
+
+on:
+  push:
+    paths:
+      - 'fitfusion-backend/**'
+  pull_request:
+    paths:
+      - 'fitfusion-backend/**'
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: fitfusion-backend
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm test
+
+      - name: Lint (optional)
+        run: |
+          if [ -f .eslintrc.js ]; then
+            npx eslint .
+          else
+            echo "No ESLint config found, skipping lint step."
+          fi
