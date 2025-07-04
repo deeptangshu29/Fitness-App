@@ -9,7 +9,7 @@ import Meal from './models/Meal.js';
 import Trainer from './models/Trainer.js';
 import Goal from './models/Goal.js';
 import './models/UserTrainer.js';
-import logger from './utils/logger.js'; // ✅ Import logger
+import logger from './utils/logger.js';
 import cors from 'cors';
 
 // Import routes
@@ -29,10 +29,9 @@ const app = express();
 app.use(express.json());
 
 app.use(cors({
-	origin: [
-		'http://localhost:5173',
-		'http://localhost:5174'
-	],
+	origin: (origin, callback) => {
+		callback(null, true); // Allow all origins
+	},
 	credentials: true,
 }));
 

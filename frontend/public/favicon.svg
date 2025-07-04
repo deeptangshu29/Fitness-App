@@ -1,0 +1,15 @@
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <!-- Gradient definition -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4a4a4a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2a2a2a;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Rounded rectangle background with gradient -->
+  <rect width="128" height="128" rx="28" ry="28" fill="url(#bgGradient)"/>
+  
+  <!-- FF text -->
+  <text x="64" y="78" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="white" text-anchor="middle">FF</text>
+</svg>
