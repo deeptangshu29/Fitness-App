@@ -827,9 +827,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 Acknowledgments
 
-- OpenWeatherMap API for weather data
-- ShadCN UI for beautiful components
-- Tailwind CSS for styling
+- [OpenWeatherMap API](https://openweathermap.org/) for weather data
+- [ShadCN UI](https://github.com/shadcn-ui/ui) for beautiful components
+- [Tailwind CSS](https://github.com/tailwindlabs/tailwindcss) for styling
 - All the amazing open-source libraries that made this project possible
 
 ---
